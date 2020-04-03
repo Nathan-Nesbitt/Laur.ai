@@ -72,23 +72,6 @@ This allows the user to recieve a logical response when the context is unsimilar
 
 > Sorry :,( I don't know what microsoft is!
 
-### POS Tagging
-Our solution to the chatbot used POS Tagging to tag, cluster then find the lemmas of each word. This allows us to increase the number of ‘collisions’ and therefore increase the probability of finding a match.
-
-`running` would then be tagged as `Verb` and would then be used inside of the lemmatizer to reduce it down to `run`. This would mean that we would have 
-collisions with `run`, `running`, `runs`, and `ran`.
-
-
-### Synonym Recognition
-Our solution implemented Synonym Recognition using the NLTK WordNet libraries, this allows us to cluster synonyms so that we can have higher chances of having ‘collisions’ which gives us better predictions for responses.
-
-This means that when we enter the following word:
-* Hello
-
-It also checks the following collisions at a lower weight:
-* Hi, Hey, Howdy, What's Up 
-
-Increasing the collisions of similar sentences.
 
 ## Topics
 Because laur_ai is trained on an amount of loosely structured data, fits a model off of these responses, and produces outputs based off of the model, laur_ai's operaton is similar to unsupervised learning and can respond to any topic provided the data it is trained upon recognizes it.
